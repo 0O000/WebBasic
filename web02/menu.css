@@ -1,0 +1,19 @@
+#nav > li {
+    list-style: none;
+    float: left;
+    height: 50px;
+    background-color: #f0f8ff;
+}
+
+#log {
+    list-style: none;
+    height: 100px;
+    background-color: aquamarine;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    float: left;
+}

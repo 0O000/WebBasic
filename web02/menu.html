@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: aliceblue;
+            padding: 10px 20px;
+            border: 1px solid gray;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo .buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo .buttons button {
+            margin: 2px 0;
+            padding: 5px 10px;
+            font-size: 14px;
+            border: 1px solid gray;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .nav-links li:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 25px;
+            left: 0;
+            background-color: white;
+            border: 1px solid gray;
+            list-style: none;
+            padding: 5px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown-menu li {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .dropdown-menu li:hover {
+            background-color: gray;
+        }
+
+        .search {
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo" style="background-color: white;">
+            <a href="menu.html"><img src="KB국민은행로고.png" alt="KB Logo"></a>
+            <div class="buttons">
+                <button>로그인</button>
+                <button>인증센터</button>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                개인
+            </li>
+            <li>
+                기업
+            </li>
+            <li>
+                금융상품
+            </li>
+            <li>
+                자산관리
+            </li>
+            <li>
+                부동산
+            </li>
+            <li>
+                퇴직연금
+            </li>
+            <li>
+                카드
+            </li>
+            <li class="dropdown">
+                전체서비스 ▼
+            </li>
+            <li class="dropdown">
+                GLOBAL ▼
+            </li>
+        </ul>
+
+        <div class="search">🔍︎</div>
+    </div>
+</body>
+</html>

@@ -24,11 +24,37 @@
             background-color: black;
             color: teal;
         }
+        input:disabled {
+            background-color: gray;
+        }
+        input:focus {
+            background-color: green;
+        }
+        input[type = text]{
+            background-color: red;
+            color: white;
+            font-size: 30px;
+        }
+        input[type ^= pass]{
+            background-color: greenyellow;
+            color: white;
+            font-size: 70px;
+        }
+        button:hover {
+            color: red;
+            background-color: aqua;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <a href="기본선택자.html">기본선택자</a> &nbsp &nbsp;
     <a href="https://www.daum.net">다음</a>
     <hr>
+    user : <input type="text" disabled value="apple"><br>
+    password : <input type="password"> <br>
+    <button>로그인하기</button>
+    <hr>
+
 </body>
 </html>
