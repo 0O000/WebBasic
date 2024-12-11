@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        /* Default styles */
+        #title {
+            background-color: black;
+            color: violet;
+            width: 300px;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #yellowpink,
+        #blackpink,
+        #greenpink {
+            display: none;
+        }
+
+        /* For screens with min-width 960px */
+        @media screen and (min-width: 960px) {
+            #title {
+                background-color: yellow;
+            }
+
+            #blackpink {
+                display: block;
+            }
+        }
+
+        /* For screens between 768px and 959px */
+        @media screen and (min-width: 768px) and (max-width: 959px) {
+            #title {
+                background-color: black;
+            }
+
+            #yellowpink {
+                display: block;
+            }
+        }
+
+        /* For screens with max-width 767px */
+        @media screen and (max-width: 767px) {
+            #title {
+                background-color: green;
+            }
+
+            #greenpink {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <div id="blackpink">난 블랙 핑크</div>
+        <div id="yellowpink">난 옐로우 핑크</div>
+        <div id="greenpink">난 그린 핑크</div>
+    </div>
+    <img src="img/pink.png" width="300px" alt="블랙핑크" style="padding: 20px; margin: 20px;">
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            text-align: center;
+        }
+        .outer{
+            display: grid;
+            grid-template-rows: 100px 150px;
+            grid-template-columns: 300px 100px auto;
+            padding: 20px;
+            row-gap: 10px;
+            column-gap: 10px;
+        }
+        #d1{
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div id="d1" style="background-color: aqua;">감자가 맛있어</div>
+        <div id="d2" style="background-color: green;">고구마가 맛있어</div>
+        <div id="d3" style="background-color: yellow;">양파가 맛있어</div>
+        <div id="d4" style="background-color: pink;">배추가 맛있어</div>
+    </div>
+</body>
+</html>
