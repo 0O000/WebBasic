@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            text-align: center;
+            border: 5px;
+            background-color: cornsilk;
+            display: flex;
+            font-size: 30px;
+            font-weight: bold;
+            padding: 10px;
+            border-style: double;
+        }
+        #d1, #d3{
+            flex-grow: 1;
+        }
+        #d2{
+            flex-grow: 3;
+        }
+        img{
+            width: 200px;
+            height: 250px;
+            margin: 20px;
+        }
+        #d2 > img{
+            width: 350px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div id="d1">우아하게! <br> <img src="img/flex-1.png" alt=""></div>
+        <div id="d2">달려보자고! <br> <img src="img/flex-2.png" alt=""></div>
+        <div id="d3">스피디하게! <br> <img src="img/flex-3.png" alt=""></div>
+    </div>
+</body>
+</html>
