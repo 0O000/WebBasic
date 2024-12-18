@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Switcher with Buttons</title>
+    <style>
+        #image-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #main-image {
+            display: block;
+            margin: 20px auto;
+        }
+        .button-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        hr{
+            background-color: red;
+            height: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="btn-jeju" style="background-color: limegreen;">제주도로</button>
+        <button id="btn-japan" style="background-color: orange;">일본으로</button>
+        <button id="btn-hawaii" style="background-color: purple; color: white;">하와이로</button>
+    </div>
+    <div id="image-container">
+        <hr>
+        <h2>힘들다!! 우리도 떠나자!!</h2>
+        <hr>
+        <img id="main-image" src="img/image4.png" alt="Default Image" width="400">
+    </div>
+    
+    <script>
+        const jejuImage = "img/image1.png";
+        const japanImage = "img/image2.png";
+        const hawaiiImage = "img/image3.png";
+
+        const imageElement = document.getElementById("main-image");
+
+        document.getElementById("btn-jeju").addEventListener("click", () => {
+            imageElement.src = jejuImage;
+        });
+
+        document.getElementById("btn-japan").addEventListener("click", () => {
+            imageElement.src = japanImage;
+        });
+
+        document.getElementById("btn-hawaii").addEventListener("click", () => {
+            imageElement.src = hawaiiImage;
+        });
+    </script>
+</body>
+</html>

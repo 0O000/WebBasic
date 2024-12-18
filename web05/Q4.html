@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pay(){
+            let select = document.querySelector('#select').value;
+            let order = document.querySelector('#order')
+            let result = document.querySelector('#result')
+            let shop = document.querySelector('#shop').value
+            let money = document.querySelector('#money').value;
+            let sum = 0;
+
+            if(select == 1){
+                order.innerHTML = shop + "에서 " + money + "원 " + "계좌이체로 구매했습니다."
+            }else if(select == 2){
+                sum = parseInt(money) + 1000
+                order.innerHTML = shop + "에서 " + sum + "원 " + "신용카드로 구매했습니다."
+            }else if(select ==3){
+                sum = parseInt(money) + 500
+                order.innerHTML = shop + "에서 " + sum + "원 " + "휴대폰 결제로 구매했습니다."
+            }
+        }
+    </script>
+    <style>
+        hr{
+            height: 2px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    구매상점 입력: <input type="text" id="shop"> <br>
+    결제금액 입력: <input type="text" id="money">
+    <hr>
+    결제 수단 선택:
+    <select id="select">
+        <option value="1">계좌이체</option>    
+        <option value="2">신용카드</option>
+        <option value="3">휴대폰 결제</option>
+    </select>
+    <hr>
+    <button onclick="pay()">결제금액 계산</button>
+    <div id="order"></div>
+    <div id="result"></div>
+</body>
+</html>

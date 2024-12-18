@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            background-color: wheat;
+        }
+        body{
+        }
+    </style>
+    <script>
+        function idCheck(){
+            let userId = document.getElementById("userId").value;
+            let result = document.getElementById("result");
+            if(userId == 'root'){
+                result.innerHTML = "<h3>아이디 성공</h3>"
+            }
+        }
+        function find(){
+            let userFind = document.getElementById("find").value
+            location.href = "https://kin.naver.com/search/list.naver?query=" + userFind
+        }
+        function webtoonFind(){
+            let userFind = document.getElementById("webtoonFind").value
+            location.href = "https://comic.naver.com/search?keyword=" + userFind
+        }
+    </script>
+</head>
+<body>
+    아이디 <input type="text" id="userId">
+    <button onclick="idCheck()">아이디 체크</button> <br>
+    <h3 id="result">
+    </h3>
+    <hr>
+    지식인 검색어 <input type="text" id="find">
+    <button onclick="find()">지식인 검색</button>
+    <hr>
+    보고 싶은 웹툰 입력 <input type="text" id="webtoonFind">
+    <button onclick="webtoonFind()">웹툰 검색</button>
+</body>
+</html>

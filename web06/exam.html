@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="numberInput">Enter a number:</label>
+        <input type="number" id="numberInput" placeholder="Enter a number">
+        <button type="button" onclick = "doubleNumber()">Double the number</button>
+    </form>
+    <script>
+        function doubleNumber(){
+            const numberValue = document.getElementById('numberInput').value;
+            if(numberValue){
+                const doubledValue = Number(numberValue) * 2;
+                alert("Double value: " + doubledValue);
+            }else{
+                alert("Please enter a valid number!");
+            }
+        }
+    </script>
+</body>
+
+</html>

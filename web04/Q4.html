@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = [];
+        var price = 0;
+        console.log(arr[0]);
+        while(true){
+            let seat = prompt("좌석번호 선택(1~14), 종료0")
+            if(seat == 0){
+                alert("예약 시스템을 종료합니다.")
+                break;
+            }
+            if(arr[seat] == 1){
+                alert("이미 예약된 자리입니다.")
+            }else{
+                arr[seat] = 1;
+                price = price + 5000;
+            }
+        }
+        document.write("예약된 좌석번호는 ")
+        for(var i = 0; i < 14; i++){
+            if(arr[i] == 1){
+                document.write(i)
+            }
+        }
+        document.write("<br>예매금액은 " + price + "원")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

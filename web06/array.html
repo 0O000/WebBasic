@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const list1 = [10, 20, 30, 40];
+        const Q1 = list1.reduce((sum, num) => sum + num, 0);
+        const list2 = [5, 12, 8, 130, 44];
+        const Q2 = Math.max(...list2);
+        const list3 = [1, 2, 3, 4, 5];
+        const Q3 = list3.includes(3);
+        const list4 = [1, 2, 3, 4, 5];
+        const Q4 = list4.filter(num => num != 3);
+        const Q5 = [30, 10, 20, 50, 40];
+        Q5.sort((a, b) => a - b);
+        const list6 = ["Apple", "Banana", "Cherry"];
+        const Q6 = list6.join(",");
+        const list7 =  [1, 2, 2, 3, 4, 4, 5];
+        const Q7 = [...new Set(list7)];
+        const list8 = [10, 15, 20, 25, 30];
+        const Q8 = list8.filter(num => num % 2 === 0);
+        const list9 = [2, 3, 4];
+        const Q9 = list9.map(num => num * 2);
+        const list10 = [[1, 2], [3, 4], [5, 6]];
+        const Q10 = list10.flat();
+
+        console.log(Q1);
+        console.log(Q2);
+        console.log(Q3);
+        console.log(Q4);
+        console.log(Q5);
+        console.log(Q6);
+        console.log(Q7);
+        console.log(Q8);
+        console.log(Q9);
+        console.log(Q10);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

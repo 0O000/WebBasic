@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function check(){
+            let userId = document.getElementById("userId").value.length;
+            let userPw = document.getElementById("userPw").value;
+            let checkPw = document.getElementById("checkPw").value;
+            let correct = document.getElementById("correct");
+
+            if(userId < 5){
+                alert("5미만 입니다. 다시 입력해주세요.")
+            }else{
+                if(userPw == checkPw){
+                    correct.innerHTML = "<h3>일치!!!</h3>"
+                }else{
+                    correct.innerHTML = "<h3>불일치!!!</h3>"
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    아이디 입력: <input type="text" id="userId">
+    <hr>
+    패스워드: <input type="text" id="userPw">
+    패스워드 확인: <input type="text" id="checkPw"> <br>
+    <button onclick="check()">확인</button>
+    <h3 id="correct">
+
+    </h3>
+</body>
+</html>

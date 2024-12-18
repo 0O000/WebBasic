@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label for="textInput">Enter a sentence:</label>
+        <input type="text" id="textInput" placeholder="Type here...">
+        <button type="button" onclick="processText()">Process</button>
+    </form>
+    <p id="outputUpperCase"></p>
+    <p id="outputLength"></p>
+
+    <script>
+        function processText(){
+            const textInput = document.getElementById('textInput').value;
+            const outputUppercase = document.getElementById('outputUpperCase');
+            const outputLength = document.getElementById('outputLength');
+
+            if(textInput){
+                const upperCasedText = textInput.toUpperCase();
+                const textLength = textInput.length;
+
+                outputUppercase.textContent = `Uppercase: ${upperCasedText}`;
+                outputLength.textContent = `Length: ${textLength}`;
+            }else{
+                //입력값이 없을 때 메시지 출력
+                outputUppercase.textContent = "Please enter a sentence!";
+                outputLength.textContent = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

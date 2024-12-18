@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login() {
+            let userId = document.getElementById("userId").value;
+            let userPw = document.getElementById("userPw").value;
+            let resultTag = document.getElementById("result");
+            if (userId == 'root' && userPw == '1234') {
+                resultTag.innerHTML = "<h3 style='color: red'>로그인성공</h3>";
+            } else {
+                resultTag.innerHTML = "<h3>로그인실패</h3>";
+            }
+        }
+        function find(){
+            let findIn = document.getElementById("find").value;
+            location.href = "https://kin.naver.com/search/list.naver?query=오사카" + findIn
+        }
+    </script>
+</head>
+<body>
+    아이디 : <input type="text" id="userId"><br>
+    패스워드 : <input type="text" id="userPw"><br>
+    <button onclick="login()">로그인</button>
+    <hr>
+    네이버 지식인 검색에 입력: <input type="text" id="find">
+    <button onclick="find()">지식인 검색</button>
+    <hr>
+    <!-- alert말고 body에 넣을 때는 넣을 공간을 미리 만들어두세요.! -->
+    <div id="result" style="background: yellow;">
+        <h3>결과 들어가는 곳.</h3>
+    </div>
+</body>
+</html>

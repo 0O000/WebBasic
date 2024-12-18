@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const info = {
+            yeouidoParkCenter: {
+                name: "여의도파크센터",
+                type: "오피스텔",
+                totalUnits: 246,
+                areaRange: "127.25~495.05㎡",
+                recentTransaction: {
+                    size: "202㎡",
+                    price: "16억 4,500",
+                    date: "21.10.06"
+                },
+            },
+
+            sambuAPT: {
+                name: "삼부",
+                type: "아파트",
+                totalUnits: 866,
+                areaRange: "89.25~198.34㎡",
+                recentTransaction: {
+                    size: "89㎡",
+                    price: "25억 2,000",
+                    date: "24.11.01"
+                },
+            },
+
+            misung: {
+                name: "미성",
+                type: "아파트",
+                totalUnits: 577,
+                areaRange: "98~176㎡",
+                recentTransaction: {
+                    size: "98㎡",
+                    price: "21억 9,000",
+                    date: "24.10.15"
+                },
+            },
+
+            displayInfo: function (property) {
+                console.log(`아파트 이름: ${property.name}`);
+                console.log(`타입: ${property.type}`);
+                console.log(`세대 수: ${property.totalUnits}`);
+                console.log(`크기: ${property.areaRange}`);
+            },
+
+            getRecentTransaction: function (property) {
+                return `최근 거래: 아파트 이름: ${property.recentTransaction.size} - 
+                가격: ${property.recentTransaction.price} 거래날짜: (Date: ${property.recentTransaction.date})`;
+            }
+            
+        };
+
+        // 실행
+        info.displayInfo(info.yeouidoParkCenter);
+        console.log(info.getRecentTransaction(info.yeouidoParkCenter));
+        info.displayInfo(info.sambuAPT);
+        console.log(info.getRecentTransaction(info.sambuAPT));
+        info.displayInfo(info.misung);
+        console.log(info.getRecentTransaction(info.misung));
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10, 30, 20, 40];
+        let result1 = arr.reduce((sum, x) => sum + x);
+        alert(result1);
+        let result2 = Math.max(...arr);
+        alert(result2);
+        let result3 = arr.indexOf(30);
+        alert(result3)
+        let result4 = arr.sort();
+        alert(result4)
+        let arr2 =  ["Apple", "Banana", "Cherry"];
+        let result5 = arr2.join(", ")
+        alert(result5)
+    </script>
+</body>
+</html>

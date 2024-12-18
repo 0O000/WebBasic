@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const people = [
+            { name: "Alice", age: 17 },
+            { name: "Bob", age: 22 },
+            { name: "Charlie", age: 15 },
+            { name: "David", age: 19 }
+        ];
+        const adults = people.filter(person => person.age >= 18);
+        console.log(adults);
+        // 출력: [{ name: "Bob", age: 22 }, { name: "David", age: 19 }]
+        // 1. 객체가 비어있는지 확인하기
+        const obj1 = {};
+        console.log(Object.keys(obj1).length === 0); // true
+        // 2. 객체에 특정 키가 존재하는지 확인하기
+        const obj2 = { name: "Alice", age: 25 };
+        console.log("age" in obj2); // true
+        // 또는
+        const obj = { name: "Alice", age: 25 };
+        console.log(Object.keys(obj).includes("age")); // true
+        // 3. 객체의 모든 키를 배열로 변환하기
+        const obj3 = { x: 10, y: 20, z: 30 };
+        console.log(Object.keys(obj3)); // ["x", "y", "z"]
+        // 4. 객체의 모든 값을 배열로 변환하기
+        console.log(Object.values(obj3)); // [10, 20, 30]
+        // 5. 객체를 [키, 값] 쌍의 배열로 변환하기
+        console.log(Object.entries(obj3)); // [["x", 10], ["y", 20], ["z", 30]]
+    </script>
+</body>
+
+</html>
